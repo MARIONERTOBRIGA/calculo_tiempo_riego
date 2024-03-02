@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('calculator-form');
+  const form = document.getElementById('fertilizante-form'); // Corregido el ID del formulario
   const resultContainer = document.getElementById('result');
 
   form.addEventListener('submit', function(event) {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const porcentajeFosforo = parseFloat(document.getElementById('porcentaje-fosforo').value);
     const porcentajePotasio = parseFloat(document.getElementById('porcentaje-potasio').value);
     const kilogramosFertilizante = parseFloat(document.getElementById('kilogramos-fertilizante').value);
-    const superficieHectareas = parseFloat(document.getElementById('superficie-hectareas').value);
+    const superficieHectareas = parseFloat(document.getElementById('superficie').value); // Corregido el ID del campo de entrada de superficie
 
     // Calcular las unidades de nitrógeno, fósforo y potasio
     const unidadesNitrogeno = (kilogramosFertilizante / superficieHectareas) * (porcentajeNitrogeno / 100);
