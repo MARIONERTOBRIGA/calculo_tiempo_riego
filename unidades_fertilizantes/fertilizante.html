@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Nutrientes de Fertilizante</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Nutrientes de Fertilizante</h1>
+    <form id="calculator-form">
+      <label for="porcentaje-nitrogeno">Porcentaje de nitrógeno:</label>
+      <input type="number" step="any" id="porcentaje-nitrogeno" required>
+      <label for="porcentaje-fosforo">Porcentaje de fósforo:</label>
+      <input type="number" step="any" id="porcentaje-fosforo" required>
+      <label for="porcentaje-potasio">Porcentaje de potasio:</label>
+      <input type="number" step="any" id="porcentaje-potasio" required>
+      <label for="kg-hectarea">Kilogramos por hectárea de fertilizante a aplicar:</label>
+      <input type="number" step="any" id="kg-hectarea" required>
+      <button type="submit">CALCULAR</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
