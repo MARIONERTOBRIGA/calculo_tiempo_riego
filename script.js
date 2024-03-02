@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const caudalGoteros = parseFloat(document.getElementById('caudal-goteros').value);
 
     // Calcular el área de riego (hectáreas)
-    const areaRiego = (distanciaFilas * distanciaGoteros / 100) / 10000;
+    const areaRiego = ((distanciaFilas * (distanciaGoteros / 100)) / 10000;
 
     // Calcular el tiempo de riego (horas)
     const tiempoRiego = (volumenRiego * 1000) / (caudalGoteros * areaRiego);
