@@ -11,12 +11,38 @@ body {
   padding: 20px;
 }
 
+/* Estilos de los campos de entrada */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Estilos del botón de enviar */
+button[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
 /* Estilos del pie de página y logotipo */
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 50px; /* Ajusta el margen superior según sea necesario */
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
 }
 
 .footer-container footer {
