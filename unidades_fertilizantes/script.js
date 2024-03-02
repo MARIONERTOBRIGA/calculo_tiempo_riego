@@ -9,12 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const porcentajeNitrogeno = parseFloat(document.getElementById('porcentaje-nitrogeno').value);
     const porcentajeFosforo = parseFloat(document.getElementById('porcentaje-fosforo').value);
     const porcentajePotasio = parseFloat(document.getElementById('porcentaje-potasio').value);
-    const kgHectarea = parseFloat(document.getElementById('kg-hectarea').value);
+    const kilogramosFertilizante = parseFloat(document.getElementById('kilogramos-fertilizante').value);
+    const superficieHectareas = parseFloat(document.getElementById('superficie-hectareas').value);
 
     // Calcular las unidades de nitrógeno, fósforo y potasio
-    const unidadesNitrogeno = porcentajeNitrogeno * kgHectarea / 100;
-    const unidadesFosforo = porcentajeFosforo * kgHectarea / 100;
-    const unidadesPotasio = porcentajePotasio * kgHectarea / 100;
+    const unidadesNitrogeno = (kilogramosFertilizante / superficieHectareas) * (porcentajeNitrogeno / 100);
+    const unidadesFosforo = (kilogramosFertilizante / superficieHectareas) * (porcentajeFosforo / 100);
+    const unidadesPotasio = (kilogramosFertilizante / superficieHectareas) * (porcentajePotasio / 100);
 
     // Mostrar el resultado en el contenedor de resultado
     resultContainer.innerHTML = `
