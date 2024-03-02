@@ -7,34 +7,35 @@
   <link rel="stylesheet" href="../styles.css"> <!-- Enlazar la hoja de estilos común -->
 </head>
 <body>
-  <h1>Calculadora de Unidades de Fertilizantes</h1>
-  
-  <form id="calculator-form">
-    <label for="porcentaje-nitrogeno">Porcentaje de nitrógeno:</label>
-    <input type="number" id="porcentaje-nitrogeno" required><br>
+  <div class="container">
+    <h2>Calculadora de Unidades de Fertilizantes</h2>
+    <form id="fertilizante-form">
+      <label for="porcentaje-nitrogeno">Porcentaje de nitrógeno (%):</label>
+      <input type="number" id="porcentaje-nitrogeno" step="0.01" min="0" required>
 
-    <label for="porcentaje-fosforo">Porcentaje de fósforo:</label>
-    <input type="number" id="porcentaje-fosforo" required><br>
+      <label for="porcentaje-fosforo">Porcentaje de fósforo (%):</label>
+      <input type="number" id="porcentaje-fosforo" step="0.01" min="0" required>
 
-    <label for="porcentaje-potasio">Porcentaje de potasio:</label>
-    <input type="number" id="porcentaje-potasio" required><br>
+      <label for="porcentaje-potasio">Porcentaje de potasio (%):</label>
+      <input type="number" id="porcentaje-potasio" step="0.01" min="0" required>
 
-    <label for="kilogramos-fertilizante">Kilogramos de fertilizante:</label>
-    <input type="number" id="kilogramos-fertilizante" required><br>
+      <label for="kilogramos-fertilizante">Kilogramos de fertilizante:</label>
+      <input type="number" id="kilogramos-fertilizante" step="0.01" min="0" required>
 
-    <label for="superficie-hectareas">Superficie (hectáreas):</label>
-    <input type="number" id="superficie-hectareas" required><br>
+      <button type="submit">Calcular</button>
+    </form>
 
-    <button type="submit">Calcular</button>
-  </form>
+    <div id="result"></div>
+  </div>
 
-  <div id="result"></div>
+  <div class="footer-container">
+    <footer>
+      <p>ATRIA NERTÓBRIGA Nº501108<br>Mario Murua<br>atrianertobriga@gmail.com</p>
+      <img src="../tu_logo.jpg" alt="Logotipo" class="logo">
+    </footer>
+  </div>
 
-  <footer>
-    <p>ATRIA NERTÓBRIGA Nº501108<br>Mario Murua<br>atrianertobriga@gmail.com</p>
-    <img src="../tu_logo.jpg" alt="Logotipo">
-  </footer>
-
-  <script src="script.js"></script> <!-- Enlazar el script JavaScript -->
+  <script src="script.js"></script> <!-- Enlazar el script de JavaScript -->
 </body>
 </html>
+
