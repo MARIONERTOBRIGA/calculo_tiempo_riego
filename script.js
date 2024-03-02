@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const areaRiego = (distanciaFilas * distanciaGoteros) / 10000;
 
     // Calcular el tiempo de riego (horas)
-    const tiempoRiego = volumenRiego / (caudalGoteros * areaRiego);
+    const tiempoRiego = (volumenRiego * 1000) / (caudalGoteros * areaRiego);
 
     // Mostrar el resultado en el contenedor de resultado
     resultContainer.innerHTML = `Tiempo de riego: ${tiempoRiego.toFixed(2)} horas`;
