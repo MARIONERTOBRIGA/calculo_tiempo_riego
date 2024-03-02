@@ -12,10 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const caudalGoteros = parseFloat(document.getElementById('caudal-goteros').value);
 
     // Calcular el tiempo de riego (horas)
-    const tiempoRiego = volumenRiego / ((10000 / (distanciaFilas * distanciaGoteros / 100)) * (caudalGoteros / 1000));
+    const tiempoRiegoHoras = volumenRiego / ((10000 / (distanciaFilas * distanciaGoteros / 100)) * (caudalGoteros / 1000));
+
+    // Calcular las horas y minutos
+    const horas = Math.floor(tiempoRiegoHoras);
+    const minutos = Math.round((tiempoRiegoHoras - horas) * 60);
+
+    // Generar el mensaje de resultado
+    let resultadoMensaje = `Tiempo de riego: ${horas} horas`;
+    if (minutos > 0) {
+      resultadoMensaje += ` y ${minutos} minutos`;
+    }
 
     // Mostrar el resultado en el contenedor de resultado
-    resultContainer.innerHTML = `Tiempo de riego: ${tiempoRiego.toFixed(2)} horas`;
+    resultContainer.innerHTML = resultadoMensaje;
   });
 });
-
