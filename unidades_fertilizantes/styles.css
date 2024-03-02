@@ -37,11 +37,18 @@ button[type="submit"]:hover {
   background-color: #45a049;
 }
 
-/* Estilos del resultado */
-#result {
-  margin-top: 20px;
+/* Estilos del pie de página y logotipo */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
 }
 
-#result p {
-  margin: 5px 0;
+.footer-container footer {
+  font-size: 14px;
+}
+
+.logo {
+  width: 100px; /* Ajusta el tamaño del logo según sea necesario */
 }
