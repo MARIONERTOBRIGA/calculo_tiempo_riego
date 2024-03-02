@@ -11,8 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const distanciaGoteros = parseFloat(document.getElementById('distancia-goteros').value);
     const caudalGoteros = parseFloat(document.getElementById('caudal-goteros').value);
 
+    // Calcular el área de riego (hectáreas)
+    const areaRiego = (distanciaFilas * distanciaGoteros) / 10000;
+
     // Calcular el tiempo de riego (horas)
-    const tiempoRiego = volumenRiego / (10000 / (distanciaFilas * (distanciaGoteros / 100)) * (caudalGoteros / 1000)
+    const tiempoRiego = volumenRiego / (caudalGoteros * areaRiego);
 
     // Mostrar el resultado en el contenedor de resultado
     resultContainer.innerHTML = `Tiempo de riego: ${tiempoRiego.toFixed(2)} horas`;
