@@ -19,3 +19,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mostrar el resultado en el contenedor de resultado
     resultContainer.innerHTML = `Tiempo de riego: ${tiempoRiego.toFixed(2)} horas`;
+  });
+});
