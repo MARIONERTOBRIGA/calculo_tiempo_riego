@@ -11,13 +11,13 @@
     <h1>Calculadora de Tiempo de Riego</h1>
     <form id="calculator-form">
       <label for="volumen-riego">Volúmen de riego (m<sup>3</sup>/hectárea):</label>
-      <input type="number" id="volumen-riego" required>
+      <input type="number" step="0.01" id="volumen-riego" required>
       <label for="distancia-filas">Distancia entre filas (metros):</label>
-      <input type="number" id="distancia-filas" required>
+      <input type="number" step="0.01" id="distancia-filas" required>
       <label for="distancia-goteros">Distancia entre goteros (centímetros):</label>
-      <input type="number" id="distancia-goteros" required>
+      <input type="number" step="0.01" id="distancia-goteros" required>
       <label for="caudal-goteros">Caudal de goteros (litros/hora):</label>
-      <input type="number" id="caudal-goteros" required>
+      <input type="number" step="0.01" id="caudal-goteros" required>
       <button type="submit">CALCULAR</button>
     </form>
     <div id="result"></div>
